@@ -8,7 +8,10 @@
     align-items: center;
     min-height: 130vh;
     margin: 0;
-    background-color: #0288D1;
+    background-color: #00ffcc;
+    /* filter: blur(0.5px);
+    background-image: -webkit-filter: blur(0.5px);; */
+    
   }
   
   body, .quote-input {
@@ -33,7 +36,7 @@
     position: absolute;
     top: 20%;
     left: 23%;
-    color: aqua;
+    color: burlywood;
     border-style: ridge;
     /* border: #0288D1; */
     border-color: brown;
@@ -42,6 +45,8 @@
     /* height: 10%; */
     /* min-height: 50px; */
   }
+  
+  
  .btn{
     padding: 5px 5px 5px 5px;
 

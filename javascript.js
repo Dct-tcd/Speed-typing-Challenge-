@@ -2,7 +2,7 @@ const RANDOM_QUOTE_API_URL = 'http://api.quotable.io/random'
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
-let givenNumber=12000;
+
 // function example() {
 //   let btn = document.querySelector("#choose");
 //  //  let randomNumber = Math.ceil(Math.random() * 100);
@@ -14,11 +14,8 @@ let givenNumber=12000;
 //   };
 // }
 // example();
-
-window.setInterval('refresh()',givenNumber); 	// Call a function every 10000 milliseconds (OR 10 seconds).
-
-// if (getTimerTime()>=parseInt(2)) alert('hj');
-
+let numberoftime=0;
+// numberoftime=parseInt(numberoftime);
 quoteInputElement.addEventListener('input', () => {
   const arrayQuote = quoteDisplayElement.querySelectorAll('span')
   const arrayValue = quoteInputElement.value.split('')
@@ -39,10 +36,11 @@ quoteInputElement.addEventListener('input', () => {
       correct = false
     }
   })
-
-  if (correct) {alert('You are the Master 😄😄😄	');renderNewQuote()}
-  // else {alert('sorry');}
+  if (correct) {numberoftime+=1;renderNewQuote1();}
 })
+
+let givenNumber=17000;
+window.setInterval('refresh(numberoftime)',givenNumber); 
 
 function getRandomQuote() {
   return fetch(RANDOM_QUOTE_API_URL)
@@ -62,6 +60,18 @@ async function renderNewQuote() {
   startTimer()
 }
 
+async function renderNewQuote1() {
+  const quote = await getRandomQuote()
+  quoteDisplayElement.innerHTML = ''
+  quote.split('').forEach(character => {
+    const characterSpan = document.createElement('span')
+    characterSpan.innerText = character
+    quoteDisplayElement.appendChild(characterSpan)
+  })
+  quoteInputElement.value = null
+  // startTimer()
+}
+
 let startTime
 function startTimer() {
   timerElement.innerText = 0
@@ -79,9 +89,21 @@ function getTimerTime() {
 // window.setInterval('refresh()', 10000); 	// Call a function every 10000 milliseconds (OR 10 seconds).
 
 // // Refresh or reload page.
-function refresh() {
-  alert('Sorry champ , Better luck next time');
-    window .location.reload();
+function refresh(numberoftime) {
+if(numberoftime>3){
+  alert('Master 😊😊. You completed  ' + numberoftime + " Challenges");
+}
+else if (numberoftime==2||numberoftime==3)
+{
+  alert("You are getting there 😏😏. You completed  " + numberoftime + " Challenge")
+}
+ else if (numberoftime==1)  alert('Sorry champ 🥺😭🥺🥺😭🥺 , Better luck next time. You completed  ' + numberoftime + " Challenges");
+ else {
+  alert('Oh! that sucks.😭🥺 . You completed  NO  Challenge');
+ }  
+ 
+ window .location.reload();
+    numberoftime=0;
 }
 function refresh1() {
     window .location.reload();
