@@ -41,7 +41,10 @@ quoteInputElement.addEventListener('input', () => {
 
 let givenNumber=17000;
 window.setInterval('refresh(numberoftime)',givenNumber); 
-
+function newidea()
+{
+  renderNewQuote1()
+}
 function getRandomQuote() {
   return fetch(RANDOM_QUOTE_API_URL)
     .then(response => response.json())
