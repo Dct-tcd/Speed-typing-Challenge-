@@ -95,9 +95,9 @@ if(numberoftime>3){
 }
 else if (numberoftime==2||numberoftime==3)
 {
-  alert("You are getting there 😏😏. You completed  " + numberoftime + " Challenge")
+  alert("You are getting there 😏😏. You completed  " + numberoftime + " Challenges")
 }
- else if (numberoftime==1)  alert('Sorry champ 🥺😭🥺🥺😭🥺 , Better luck next time. You completed  ' + numberoftime + " Challenges");
+ else if (numberoftime==1)  alert('Sorry champ 🥺😭🥺🥺😭🥺 , Better luck next time. You completed  ' + numberoftime + " Challenge");
  else {
   alert('Oh! that sucks.😭🥺 . You completed  NO  Challenge');
  }  
