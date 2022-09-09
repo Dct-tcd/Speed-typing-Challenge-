@@ -1,21 +1,10 @@
-const RANDOM_QUOTE_API_URL = 'http://api.quotable.io/random'
+const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random";
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
 
-// function example() {
-//   let btn = document.querySelector("#choose");
-//  //  let randomNumber = Math.ceil(Math.random() * 100);
-//   btn.onclick = function() {
-//       givenNumber = document.querySelector("#tim").value;
-//      let valueInt = parseInt(givenNumber, 100);
-//     //  console.log( givenNumber);
-//     //  alert('cjvj');
-//   };
-// }
-// example();
 let numberoftime=0;
-// numberoftime=parseInt(numberoftime);
+
 quoteInputElement.addEventListener('input', () => {
   const arrayQuote = quoteDisplayElement.querySelectorAll('span')
   const arrayValue = quoteInputElement.value.split('')
@@ -81,10 +70,13 @@ function startTimer() {
   startTime = new Date()
   setInterval(() => {
     timer.innerText = getTimerTime()
+    // alert(getTimerTime());
   }, 1000)
+  // alert(getTimerTime());
 }
 
 function getTimerTime() {
+  // alert(1);
   return Math.floor((new Date() - startTime) / 1000)
 }
 // if (getTimerTime()>=parseInt(2)) alert('hj');
