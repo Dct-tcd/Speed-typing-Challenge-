@@ -9,9 +9,6 @@
     min-height: 130vh;
     margin: 0;
     background-color: #00ffcc;
-    /* filter: blur(0.5px);
-    background-image: -webkit-filter: blur(0.5px);; */
-    
   }
   
   body, .quote-input {
@@ -19,7 +16,19 @@
   }
   .tim{
     border-radius: 4px;
-    /* display: absolute; */
+  }
+  .play{
+    color:darkseagreen;
+    float: left;
+    margin-left:-1%;
+    margin-top: -1%;
+  }
+  #icon11{
+    size: 45px;
+    width: 45px;
+    border-radius: 15%;
+    cursor: pointer;
+    /* height: 2%;; */
   }
   .challenge{
     margin: 0;
@@ -40,7 +49,7 @@
     /* border-style: ridge; */
     /* border: #0288D1; */
     /* border-color: brown; */
-    border-radius: 4px;
+    /* border-radius: 4px; */
     /* position: absolute; */
     /* height: 10%; */
     /* min-height: 50px; */
@@ -70,7 +79,7 @@
   
   .quote-display {
     margin-bottom: 1rem;
-    margin-left: calc(1rem + 2px);
+    margin-left: calc(4rem + 2px);
     margin-right: calc(1rem + 2px);
   }
   

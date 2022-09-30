@@ -3,7 +3,28 @@ const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
 
-let numberoftime=0;
+let numberoftime=0,songnum=0;
+
+var mysong =document.getElementById("mysong");
+var mysong1=document.getElementById("mysong1");
+var icon1= document.getElementById("icon11");
+icon1.onclick = function(){
+  songnum+=1;
+  if ((songnum)%3==1)
+  {
+    mysong.play();
+    mysong1.pause(); 
+  }
+  else if ((songnum)%3==2){
+    mysong.pause();
+    mysong1.play();
+  }
+  else {
+    mysong.pause();
+    mysong1.pause();
+  }
+}
+
 
 quoteInputElement.addEventListener('input', () => {
   const arrayQuote = quoteDisplayElement.querySelectorAll('span')
@@ -28,7 +49,7 @@ quoteInputElement.addEventListener('input', () => {
   if (correct) {numberoftime+=1;renderNewQuote1();}
 })
 
-let givenNumber=17000;
+let givenNumber=40000;
 window.setInterval('refresh(numberoftime)',givenNumber); 
 function newidea()
 {
