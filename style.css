@@ -33,7 +33,7 @@ body{
 }
 
 #quoteDisplay{
-  width:90vw;
+  width:60vw;
   margin-bottom:2rem;
 }
 
@@ -45,6 +45,9 @@ body{
   color: #BB2205;
   text-decoration: underline;
 }
+.tre{
+  cursor: pointer;
+}
 .Navbar{
   display: flex;
   align-items: center;
@@ -52,6 +55,7 @@ body{
   font-size: 2rem;
   margin-left:1rem;
   margin-right:2rem;
+  /* background-color:; */
 }
 
 .challengebox{
