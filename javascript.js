@@ -2,13 +2,18 @@ const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random";
 const quoteDisplayElement = document.getElementById('quoteDisplay')
 const quoteInputElement = document.getElementById('quoteInput')
 const timerElement = document.getElementById('timer')
-
 let numberoftime=0,songnum=0;
-
-var mysong =document.getElementById("mysong");
-var mysong1=document.getElementById("mysong1");
-var icon1= document.getElementById("icon11");
+var mysong = document.getElementById("mysong");
+var mysong1 = document.getElementById("mysong1");
+var icon1 = document.getElementById("icon11");
 icon1.onclick = function(){
+  // alert("Getting bored , are we !");
+  if (songnum==1) alert("playing Faded");
+  else if (songnum==2) alert("playing Night changes");
+  else 
+  {
+    alert("Music stopped");
+  }
   songnum+=1;
   if ((songnum)%3==1)
   {
@@ -24,12 +29,9 @@ icon1.onclick = function(){
     mysong1.pause();
   }
 }
-
-
 quoteInputElement.addEventListener('input', () => {
   const arrayQuote = quoteDisplayElement.querySelectorAll('span')
   const arrayValue = quoteInputElement.value.split('')
-
   let correct = true
   arrayQuote.forEach((characterSpan, index) => {
     const character = arrayValue[index]
@@ -48,7 +50,6 @@ quoteInputElement.addEventListener('input', () => {
   })
   if (correct) {numberoftime+=1;renderNewQuote1();}
 })
-
 let givenNumber=40000;
 window.setInterval('refresh(numberoftime)',givenNumber); 
 function newidea()
@@ -60,7 +61,6 @@ function getRandomQuote() {
     .then(response => response.json())
     .then(data => data.content)
 }
-
 async function renderNewQuote() {
   const quote = await getRandomQuote()
   quoteDisplayElement.innerHTML = ''
@@ -82,7 +82,6 @@ async function renderNewQuote1() {
     quoteDisplayElement.appendChild(characterSpan)
   })
   quoteInputElement.value = null
-  // startTimer()
 }
 
 let startTime
@@ -90,12 +89,9 @@ function startTimer() {
   timerElement.innerText = 0
   startTime = new Date()
   setInterval(() => {
-    timer.innerText = getTimerTime()
-    // alert(getTimerTime());
-  }, 1000)
-  // alert(getTimerTime());
+    timer.innerText = getTimerTime();
+  }, 1000);
 }
-
 function getTimerTime() {
   // alert(1);
   return Math.floor((new Date() - startTime) / 1000)
@@ -109,15 +105,14 @@ function refresh(numberoftime) {
 if(numberoftime>3){
   alert('Master 😊😊. You completed  ' + numberoftime + " Challenges");
 }
-else if (numberoftime==2||numberoftime==3)
+else if (numberoftime==4||numberoftime==3)
 {
   alert("You are getting there 😏😏. You completed  " + numberoftime + " Challenges")
 }
- else if (numberoftime==1)  alert('Sorry champ 🥺😭🥺🥺😭🥺 , Better luck next time. You completed  ' + numberoftime + " Challenge");
+ else if (numberoftime==1||numberoftime==2)  alert('Sorry champ 🥺😭🥺🥺😭🥺 , Better luck next time. You completed  ' + numberoftime + " Challenges");
  else {
   alert('Oh! that sucks.😭🥺 . You completed  NO  Challenge');
  }  
- 
  window .location.reload();
     numberoftime=0;
 }
