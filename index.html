@@ -6,28 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="javascript.js" defer></script>
   <title>Speed Typing</title>
 </head>
-<!-- <input> -->
-<body background="https://cf.ltkcdn.net/web-design/images/orig/204538-2261x1326-HTML.jpg" class="tr">
-  <div class="timer" id="timer"></div>
+<body  class="tr">
+  <!-- Navbar-->
+  <div class="Navbar">
+     <p>Speed Typing</p>
+     <div class="timer" id="timer"></div>
+     <i class="fa-solid fa-music" id="icon1"></i>
+  </div>
+
+    <p  class="challengebox">Challenge to Type as many quotes as you can in  39 sec.</p>
+  
+  <!-- <input> -->
+  
   <div class="container">
-    <div class="play">
-      <img src="https://static.vecteezy.com/system/resources/previews/000/575/184/non_2x/play-button-icon-vector.jpg" id="icon11">
-      <!-- <h3>Music</h3> -->
-      </div>  
+     
     <div class="quote-display" id="quoteDisplay"></div>
-    <textarea id="quoteInput" class="quote-input" autofocus></textarea>
+    <textarea id="quoteInput" class="quote-input" autofocus placeholder="Start typing here"></textarea>
   </div>
  
   <div class="challenge">
     <!-- <input type="number" id="tim" value="12"  min="1" max="15"> -->
     <button class="btn" onclick="newidea()" id="choose" type="submit">Skip this  Challenge</button>
   </div>
-  <div class="challengebox">
-    <p><h1 style="font-size:2vw"><b>Challenge to Type as many quotes as you can in  39 sec.</b></h1></p>
-  </div>
+  
   <audio id="mysong">
     <source src="New/faded.mp3" type="audio/mp3">
   </audio>
