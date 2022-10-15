@@ -7,7 +7,14 @@ let numberoftime=0,songnum=0;
 
 var mysong =document.getElementById("mysong");
 var mysong1=document.getElementById("mysong1");
-var icon1= document.getElementById("icon11");
+var icon1= document.getElementById("icon1");
+
+window.onload=()=>{
+   quoteInputElement.onpaste = (e)=>{
+    alert("No paste allowed 😏");
+    e.preventDefault();
+   }
+};
 icon1.onclick = function(){
   songnum+=1;
   if ((songnum)%3==1)
