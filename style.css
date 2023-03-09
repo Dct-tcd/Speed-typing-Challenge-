@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
 
 body{
+  background: #667db6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   background-color: #323437;
   font-family:'Roboto Mono', sans-serif;
   color: #d1d0c5;
@@ -10,6 +14,10 @@ body{
 
 
 .quote-display{
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   font-size:1.5rem;
   background-color: #323437;
 }
@@ -59,6 +67,7 @@ body{
 }
 
 .challengebox{
+  
   font-size: 1.5rem;
   text-align: center;
   text-decoration: underline;
@@ -69,6 +78,7 @@ body{
 }
 
 .btn{
+  border-radius: 4%;
   display: block;
   background-color: #323437;
   color:#d1d0c5;
